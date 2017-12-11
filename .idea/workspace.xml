@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eae3d281-7c20-453e-a32e-83fcc515f4a4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/dataStructure/SingleLinkList.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/dataStructure/DoubleLinkList.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/dataStructure/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/com/dataStructure/Main.class" afterPath="$PROJECT_DIR$/out/production/DataStructure/com/dataStructure/Main.class" />
       <change beforePath="$PROJECT_DIR$/src/com/dataStructure/Main.java" afterPath="$PROJECT_DIR$/src/com/dataStructure/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,9 +20,22 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dataStructure/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="137">
+              <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="35" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoubleLinkList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dataStructure/DoubleLinkList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="80" column="27" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="80" selection-end-column="27" />
+              <folding>
+                <element signature="e#149#150#0" expanded="true" />
+                <element signature="e#181#182#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,6 +134,7 @@
         <option value="$PROJECT_DIR$/src/com/dataStructure/Dynamicarray.java" />
         <option value="$PROJECT_DIR$/src/com/dataStructure/Hashing.java" />
         <option value="$PROJECT_DIR$/src/com/dataStructure/SingleLinkList.java" />
+        <option value="$PROJECT_DIR$/src/com/dataStructure/DoubleLinkList.java" />
         <option value="$PROJECT_DIR$/src/com/dataStructure/Main.java" />
       </list>
     </option>
@@ -209,7 +223,7 @@
               <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dataStructure" type="462c0819:PsiDirectoryNode" />
-              <item name="SingleLinkList.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="DoubleLinkList.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -533,10 +547,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dataStructure/DoubleLinkList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="80" column="27" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="80" selection-end-column="27" />
+          <folding>
+            <element signature="e#149#150#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dataStructure/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="137">
+          <caret line="30" column="10" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="35" selection-end-column="24" />
           <folding />
         </state>
       </provider>

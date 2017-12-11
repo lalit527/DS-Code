@@ -28,13 +28,19 @@ public class Main {
 
         System.out.println(hashmap.get(11));*/
 
-        SingleLinkList sl = new SingleLinkList();
+        /*SingleLinkList sl = new SingleLinkList();
         sl.appendToTail(1);
         sl.appendToTail(2);
         sl.appendToTail(3);
         sl.appendToHead(4);
-        sl.printAll();
-
+        sl.printAll();*/
+        DoubleLinkList sl = new DoubleLinkList();
+        sl.appendToTail(1);
+        sl.appendToTail(2);
+        sl.appendToTail(3);
+        sl.appendToHead(4);
+        sl.printForward();
+        sl.printBackward();
 
     }
 }
