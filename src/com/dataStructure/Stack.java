@@ -1,7 +1,5 @@
 package com.dataStructure;
 
-import java.util.*;
-
 class StackNode<T>{
     T data ;
     StackNode<T> next;
