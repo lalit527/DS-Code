@@ -16,7 +16,7 @@ public class Dequeue<T> {
             }
         }
 
-        public Queue(){
+        public Dequeue(){
             this.size = 0;
             this.head = null;
             this.tail = null;
@@ -48,14 +48,4 @@ public class Dequeue<T> {
         }
     }
 
-    class Maiy{
-        public static void main(String args[]) {
-            com.dataStructure.Queue<Integer> q = new com.dataStructure.Queue<>();
-            q.insert(1);
-            q.insert(2);
-            System.out.println(q.remove());
-            System.out.println(q.remove());
-        }
-    }
 
-}
