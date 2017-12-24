@@ -8,11 +8,11 @@ public class StringCompare {
         for(int i=0; i<letter.length; i++){
             letter[i] = 0;
         }
-        char[] str1_arr = str1.toCharArray();
+        char[] str1_arr = str1.toLowerCase().toCharArray();
         for(char c : str1_arr){
             ++letter[c];
         }
-        char[] str2_arr = str2.toCharArray();
+        char[] str2_arr = str2.toLowerCase().toCharArray();
         for(int i=0; i<str2_arr.length; i++){
             --letter[str2_arr[i]];
 
@@ -26,8 +26,8 @@ public class StringCompare {
     }
 
     public static void main(String[] args){
-        String s = "Hexllo";
-        String t = "Hello";
+        String s = "Hello";
+        String t = "hello";
 
         StringCompare dp = new StringCompare();
         boolean result = dp.compareSTring(s, t);
