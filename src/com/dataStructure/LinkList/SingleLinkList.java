@@ -6,8 +6,8 @@ public class SingleLinkList {
     Stack<Integer> st = new Stack<>();
 
     class SingleNode{
-        private int data;
-        private SingleNode nextNode;
+        int data;
+        SingleNode nextNode;
 
         public SingleNode(int data){
 
@@ -21,6 +21,14 @@ public class SingleLinkList {
         this.head = null;
         this.tail = null;
 
+    }
+
+    public SingleNode getHead() {
+        return head;
+    }
+
+    public void setHead(SingleNode head) {
+        this.head = head;
     }
 
     public void addToStart(int data){
@@ -129,6 +137,25 @@ public class SingleLinkList {
         h = slowPtr;
         return h;
     }
+
+   /* public void reverseKNode(SingleNode h){
+        SingleNode slowPtr = null;
+        SingleNode fastPtr = h;
+        SingleNode tmp = fastPtr;
+        fastPtr = fastPtr.nextNode;
+        while(tmp!=null){
+            tmp.nextNode = slowPtr;
+            slowPtr = tmp;
+            tmp = fastPtr;
+            if(fastPtr!=null){
+                fastPtr = fastPtr.nextNode;
+            }
+
+        }
+        h = slowPtr;
+        return h;
+    }
+*/
 
     public int findSize(SingleNode start){
         int size = 0;
