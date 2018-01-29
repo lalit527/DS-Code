@@ -147,4 +147,22 @@ public class BinaryTree {
         return null;
 
     }
+
+    private void swapHelper(TreeNode root){
+        TreeNode tmp = root.leftChild;
+        root.leftChild = root.rightChild;
+        root.rightChild = tmp;
+    }
+    /*
+    mirror/ invert a Binary Tree
+
+     */
+    public void mirrorTree(TreeNode root) {
+        if(root == null){
+            return;
+        }
+        mirrorTree(root.leftChild);
+        mirrorTree(root.rightChild);
+        swapHelper(root);
+    }
 }
