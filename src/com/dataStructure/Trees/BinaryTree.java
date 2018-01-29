@@ -1,4 +1,6 @@
 package com.dataStructure.Trees;
+import jdk.nashorn.api.tree.Tree;
+
 import java.util.*;
 
 public class BinaryTree {
@@ -73,5 +75,76 @@ public class BinaryTree {
         }
     }
 
+    public int getHeight(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int lh = getHeight(root.leftChild);
+        int rh = getHeight(root.rightChild);
 
+        return lh>rh?lh+1:rh+1;
+    }
+
+    public void sizeReplace(TreeNode root) {
+        if(root == null){
+            return;
+        }
+        int lh = getHeight(root.leftChild);
+        int rh = getHeight(root.rightChild);
+
+        root.data = lh>rh?lh+1:rh+1;
+    }
+
+    public int sumTree(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+        int lh = sumTree(root.leftChild);
+        int rh = sumTree(root.rightChild);
+        root.data = lh + rh + root.data;
+        return  root.data;
+    }
+
+    public boolean nodeExists(TreeNode root, int n1) {
+
+        if (root.data == n1) {
+            return true;
+        }
+
+        if(root.leftChild != null && nodeExists(root.leftChild, n1)){
+            return true;
+        }
+        if(root.rightChild != null && nodeExists(root.rightChild, n1)){
+            return true;
+        }
+        return false;
+    }
+
+    public TreeNode commonLCA(TreeNode root, int n1, int n2){
+        if(root == null){
+            return null;
+        }
+
+        if(root.data == n1 || root.data == n2){
+            return root;
+        }
+
+        TreeNode LCA = commonLCA(root.leftChild, n1, n2);
+        TreeNode RCA = commonLCA(root.rightChild, n1, n2);
+
+        if(LCA != null && RCA != null){
+            return root;
+        }
+
+        if(LCA == null && RCA != null){
+            return RCA;
+        }
+
+        if(LCA != null && RCA == null){
+            return LCA;
+        }
+
+        return null;
+
+    }
 }
