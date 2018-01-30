@@ -8,7 +8,7 @@ public class TreeMain {
         bt.inOrder(bt.root);
         System.out.println("");
         //BinaryTree.TreeNode tn = bt.commonLCA(bt.root, 8, 5);
-        bt.mirrorTree(bt.root);
+        //bt.mirrorTree(bt.root);
         //System.out.println(tn.data);
         bt.inOrder(bt.root);
         System.out.println("");
@@ -26,6 +26,10 @@ public class TreeMain {
         DeepestNode dn = new DeepestNode();
         int value = dn.deepestNode(bt.root);
         System.out.println(value);
+
+        //view tree
+        ViewTree v = new ViewTree();
+        v.leftViewRec(bt.root);
 
     }
 }
