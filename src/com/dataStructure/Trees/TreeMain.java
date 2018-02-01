@@ -2,7 +2,7 @@ package com.dataStructure.Trees;
 import com.dataStructure.Trees.BinaryTree;
 public class TreeMain {
     public static void main(String[] args){
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        /*int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         BinaryTree bt = new BinaryTree();
         bt.root = bt.insertLevelOrder(arr, bt.root, 0);
         bt.inOrder(bt.root);
@@ -17,10 +17,10 @@ public class TreeMain {
         //VerifyTrees vt = new VerifyTrees();
 
 
-        /*int height = bt.getHeight(bt.root);
+        *//*int height = bt.getHeight(bt.root);
         bt.sumTree(bt.root);
         System.out.println("");
-        bt.inOrder(bt.root);*/
+        bt.inOrder(bt.root);*//*
 
         //System.out.println(height);
         DeepestNode dn = new DeepestNode();
@@ -29,7 +29,11 @@ public class TreeMain {
 
         //view tree
         ViewTree v = new ViewTree();
-        v.leftViewRec(bt.root);
-
+        v.leftViewRec(bt.root);*/
+        int in[] = new int[]{4, 8, 2, 5, 1, 6, 3, 7};
+        int post[] = new int[]{8, 4, 5, 2, 6, 7, 3, 1};
+        BinaryTree bt3 = new BinaryTree();
+        bt3.createTree(in, post);
+        bt3.preOrder(bt3.root);
     }
 }

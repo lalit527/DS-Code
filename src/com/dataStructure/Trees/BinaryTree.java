@@ -165,4 +165,42 @@ public class BinaryTree {
         mirrorTree(root.rightChild);
         swapHelper(root);
     }
+
+    /*
+    create Tree from in and post order
+     */
+    public int search(int[] in, int start, int end, int data){
+        int i = -1;
+        for(i=start; i<end; i++){
+            if(in[i] == data){
+                break;
+            }
+        }
+        return i;
+    }
+    public TreeNode createTreeUtil(int[] in, int[] post, int start, int end, Index index){
+        if(start > end){
+            return null;
+        }
+
+        TreeNode node = new TreeNode(post[index.index]);
+        index.index--;
+
+        if(start == end){
+           return node;
+        }
+
+        int inIndex = search(in, start, end, node.data);
+        node.rightChild = createTreeUtil(in, post, inIndex+1, end, index);
+        node.leftChild = createTreeUtil(in, post, start, inIndex-1, index);
+
+        return node;
+    }
+    public TreeNode createTree(int[] in, int[] post){
+        int n = in.length;
+        Index pIndex = new Index();
+        pIndex.index = n - 1;
+        this.root = createTreeUtil(in, post, 0, n-1, pIndex);
+        return this.root;
+    }
 }
