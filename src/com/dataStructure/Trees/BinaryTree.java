@@ -203,4 +203,32 @@ public class BinaryTree {
         this.root = createTreeUtil(in, post, 0, n-1, pIndex);
         return this.root;
     }
+
+    /*
+    create Tree from in and pre order
+     */
+
+    public TreeNode buildTreeHelper(int[] in, int[] pre, int start, int end, Index index){
+        if(start > end){
+            return null;
+        }
+
+        TreeNode node = new TreeNode(pre[index.index]);
+        index.index++;
+        if(start == end){
+            return node;
+        }
+
+        int inIndex = search(in, start, end, node.data);
+        node.leftChild = buildTreeHelper(in, pre, start, inIndex-1, index);
+        node.rightChild = buildTreeHelper(in, pre, inIndex+1, end, index);
+        return node;
+    }
+    public TreeNode buildTree(int[] in, int[] pre){
+        int n = in.length;
+        Index pIndex = new Index();
+        pIndex.index = 0;
+        this.root =  buildTreeHelper(in, pre, 0, n-1, pIndex);
+        return this.root;
+    }
 }
