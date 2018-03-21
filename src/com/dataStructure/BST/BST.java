@@ -206,16 +206,17 @@ public class BST {
 
     public void levelOrder() {
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        queue.add(this.root);
         while(!queue.isEmpty()){
             TreeNode tmp = queue.poll();
-            System.out.println(tmp.data + " ");
+            System.out.println(tmp.data + "-->"+(tmp.parent==null?null:tmp.parent.data));
             if(tmp.left!=null){
-                queue.add(root.left);
+                queue.add(tmp.left);
             }
             if(tmp.right != null){
-                queue.add(root.right);
+                queue.add(tmp.right);
             }
+
         }
     }
 

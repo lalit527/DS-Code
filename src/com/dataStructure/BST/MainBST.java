@@ -9,6 +9,7 @@ public class MainBST {
         tree.insert(10);
         tree.insert(4);
         tree.insert(17);
-        tree.preOrder();
+        tree.levelOrder();
+        //tree.levelOrder();
     }
 }
