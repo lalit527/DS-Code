@@ -1,4 +1,5 @@
 package com.dataStructure.BST;
+import java.util.*;
 public class BST {
     TreeNode root;
     class TreeNode {
@@ -138,6 +139,47 @@ public class BST {
         }
     }
 
+    public int height() {
+        return height(this.root);
+    }
+
+    private int height(TreeNode root) {
+        if(this.root == null){
+            return 0;
+        }else{
+            int lHeight = height(root.left);
+            int rHeight = height(root.right);
+            if(lHeight > rHeight){
+                return lHeight + 1;
+            }else{
+                return rHeight + 1;
+            }
+        }
+    }
+
+    public void leftRotate(int data) {
+        TreeNode node = search(data);
+        leftRotate(this.root, node);
+    }
+
+    private void leftRotate(TreeNode root, TreeNode node) {
+        TreeNode tmp = node.right;
+        node.right = tmp.left;
+        if(tmp.left!=null) {
+            tmp.left.parent = node;
+        }
+        tmp.parent = node.parent;
+        if(node.parent == null) {
+            root = tmp;
+        }else if(node == node.parent.left) {
+            node.parent.left = tmp;
+        }else{
+            node.parent.right = tmp;
+        }
+        tmp.left = node;
+        node.parent = tmp;
+    }
+
     public void inOrder() {
         inOrder(this.root);
     }
@@ -160,6 +202,21 @@ public class BST {
             preOrder(root.right);
         }
 
+    }
+
+    public void levelOrder() {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode tmp = queue.poll();
+            System.out.println(tmp.data + " ");
+            if(tmp.left!=null){
+                queue.add(root.left);
+            }
+            if(tmp.right != null){
+                queue.add(root.right);
+            }
+        }
     }
 
 

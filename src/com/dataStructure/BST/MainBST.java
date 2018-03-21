@@ -10,8 +10,5 @@ public class MainBST {
         tree.insert(4);
         tree.insert(17);
         tree.preOrder();
-        tree.delete(10);
-        System.out.println("*****************");
-        tree.preOrder();
     }
 }
