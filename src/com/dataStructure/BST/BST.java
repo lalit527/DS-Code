@@ -181,7 +181,7 @@ public class BST {
     }
 
     public void inOrder() {
-        inOrder(this.root);
+        inOrder(this.root); 
     }
     private void inOrder(TreeNode root) {
         if(root!=null) {

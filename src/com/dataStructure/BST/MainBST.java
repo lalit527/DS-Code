@@ -10,6 +10,8 @@ public class MainBST {
         tree.insert(4);
         tree.insert(17);
         tree.levelOrder();
+        tree.leftRotate(9);
+        tree.levelOrder();
         //tree.levelOrder();
     }
 }
