@@ -180,8 +180,12 @@ public class BST {
         node.parent = tmp;
     }
 
+    public void rightRotate(int data){
+        TreeNode node = search(data);
+    }
+
     public void inOrder() {
-        inOrder(this.root); 
+        inOrder(this.root);
     }
     private void inOrder(TreeNode root) {
         if(root!=null) {
