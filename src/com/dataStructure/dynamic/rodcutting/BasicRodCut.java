@@ -9,11 +9,11 @@ public class BasicRodCut {
         }
         int q = MIN_VAL;
         for(int i=0; i<size; i++){
-            System.out.println(q+"<-->"+size+"<-->"+i);
+            //System.out.println(q+"<-->"+size+"<-->"+i);
             //System.out.println("Fuck-->"+price[i]);
             //System.out.println("Fuck Rec-->"+price[i]+"--"+cutRod(price, (size-i-1)));
             q = Math.max(q, price[i] + cutRod(price, (size-i-1)));
-            System.out.println("Loop-q-->"+q+"Size"+size);
+            //System.out.println("Loop-q-->"+q+"Size"+size);
         }
         System.out.println("q-->"+q);
         return q;

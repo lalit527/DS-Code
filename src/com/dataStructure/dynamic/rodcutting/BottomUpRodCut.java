@@ -7,7 +7,7 @@ public class BottomUpRodCut {
         result[0] = 0;
         for(int i=1; i<=size; i++){
             int q = MIN_VAL;
-            for(int j=1; j<i; j++){
+            for(int j=0; j<i; j++){
                 q = Math.max(q, price[j] + result[i-j-1]);
             }
             result[i] = q;
@@ -17,7 +17,7 @@ public class BottomUpRodCut {
 
     public static void main(String[] args) {
         int arr[] = new int[] {1, 5, 8, 9, 10, 17, 17, 20, 24, 30};
-        int size = 4;
+        int size = 1;
         System.out.println("Maximum Obtainable Value is "+ memoRodCut(arr, size));
 
     }
